@@ -1,0 +1,352 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} MyCogito {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+	<div class="content">
+		<div class="panel-header bg-primary-gradient">
+			<div class="page-inner py-5">
+				<div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
+					<div>
+						<h2 class="text-white pb-2 fw-bold">MyCogito</h2>
+					</div>
+					<div class="ml-md-auto py-2 py-md-0">
+						<a href="#" class="btn btn-white btn-border btn-round mr-2">Manage</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="page-inner mt--5">
+			<div class="row">
+				<div class="col-md-8 full-height">
+					<div class="card">
+                        <div class="card-header">
+                            <div class="card-head-row">
+                                <div class="card-title align-items-center">Personality</div>
+                                <div class="card-tools">
+                                    <ul class="pagination pg-primary">
+                                        <li class="page-item active"><a class="page-link" href="#">1D</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">1W</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">1M</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">1Y</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">5Y</a></li>
+                                    </ul>
+								</div>
+                            </div>
+                        </div>
+						<div class="card-body">
+
+                            <!--<div class="mx-md-auto" id="radarChart" style="height: 700px; width: 1000px"></div>-->
+                            <div class="chart-container">
+								<canvas id="radarChart"></canvas>
+							</div>
+
+						</div>
+					</div>
+				</div>
+                <div class="col-md-4">
+					<div class="card">
+                        <div class="card-header">
+                            <div class="card-head-row">
+								<div class="card-title">Personality through time</div>
+                                <div class="card-tools">
+                                    <ul class="pagination pg-primary">
+                                        <li class="page-item active"><a class="page-link" href="#">1D</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">1W</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">1M</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">1Y</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">5Y</a></li>
+                                    </ul>
+								</div>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart-container">
+                                    <canvas id="personalityStackedBarchart" ></canvas>
+                                </div>
+						</div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+						<div class="card-header">
+							<div class="card-head-row">
+								<div class="card-title">Time Spent</div>
+								<div class="card-tools">
+									<div class="card-tools">
+                                    <ul class="pagination pg-primary">
+                                        <li class="page-item active"><a class="page-link" href="#">1D</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">1W</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">1M</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">1Y</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">5Y</a></li>
+                                    </ul>
+								</div>
+								</div>
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="chart-container" style="min-height: 375px">
+								<canvas id="barchart-interests"></canvas>
+							</div>
+						</div>
+					</div>
+
+
+                </div>
+
+			</div>
+
+            <div class="row">
+				<div class="col-md-12">
+					<div class="card full-height">
+						<div class="card-body">
+							<div class="card-title">Activities</div>
+							<div class="row py-3">
+								<div class="col-md-3 d-flex flex-column justify-content-around">
+									<div>
+										<h4 class="fw-bold text-uppercase text-success op-8">Most Used Website</h4>
+										<h2 class="fw-bold text-warning">Google</h2>
+										<h3 class="fw-bold text-danger op-8">9h 4m</h3>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div>
+										<h4 class="fw-bold text-uppercase text-success op-8">Social Activity</h4>
+										<h2 class="fw-bold text-warning">Like</h2>
+										<h3 class="fw-bold text-danger op-8">16</h3>
+									</div>
+								</div>
+                                <div class="col-md-3">
+									<div>
+										<h4 class="fw-bold text-uppercase text-success op-8">Most Used Topic</h4>
+										<h2 class="fw-bold text-warning">Rock Climbing</h2>
+										<h3 class="fw-bold text-danger op-8">10</h3>
+									</div>
+								</div>
+                                <div class="col-md-3">
+									<div>
+										<h4 class="fw-bold text-uppercase text-success op-8">Daily Time</h4>
+										<h2 class="fw-bold text-warning">10:00 PM - 11:00 PM</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+
+
+
+
+
+        </div>
+	</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+	<!-- Atlantis DEMO methods, don't include it in your project! -->
+	<script src="/static/assets/js/setting-demo.js"></script>
+	<script src="/static/assets/js/demo.js"></script>
+
+	<script>
+        var radarChart = document.getElementById('radarChart').getContext('2d');
+        //Chart.defaults.global.defaultFontSize = 25;
+        var myRadarChart = new Chart(radarChart, {
+			type: 'radar',
+			data: {
+				labels: ["Openness", "Conscientiousness", "Extraversion", "Agreeableness", "Neuroticism"],
+                datasets: [
+                    {
+                        label: "Personality Traits",
+                        data: [30, 40, 70, 10, 90],
+                        fill: true,
+                        backgroundColor: "rgba(255,255,255,0.4)",
+                        borderColor: "rgb(255, 99, 132)",
+                        pointBackgroundColor: "rgb(255,19,31)",
+                        pointBorderColor: "#fff",
+                        pointHoverBackgroundColor: "#fff",
+                        pointHoverBorderColor: "rgb(255, 99, 132)"
+                    }
+                ]
+			},
+			options : {
+				responsive: true,
+
+				legend : {
+					position: 'bottom',
+                    display: true,
+                    labels: {
+					    fontSize: 10,
+                        fontColor: "rgb(255, 99, 132)"
+                    },
+
+				},
+
+
+				scale: {
+                      reverse: false,
+                      gridLines: {
+                        color: ['black', 'red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
+                      },
+                      ticks: {
+                        beginAtZero: true
+                      },
+                      pointLabels: {
+                        fontSize: 20,
+                          fontColor: "rgb(166,169,170)"
+                      },
+                    },
+			}
+		});
+
+
+
+
+
+
+        new Chart(document.getElementById("barchart-interests"),
+        {
+            "type": "bar",
+            "data":
+            {
+                "labels": ["Beauty", "Dance", "Rockclimbing", "AI Jobs", "Politics", "Finance", "Election"],
+                "datasets": [
+                {
+                    "label": "",
+                    "data": [65, 59, 80, 81, 56, 55, 40],
+                    "fill": false,
+                    "backgroundColor": ["rgba(255, 99, 132, 0.5)", "rgba(255, 159, 64, 0.5)", "rgba(255, 205, 86, 0.5)", "rgba(75, 192, 192, 0.5)", "rgba(54, 162, 235, 0.5)", "rgba(153, 102, 255, 0.5)", "rgba(201, 203, 207, 0.2)"],
+                    "borderColor": ["rgb(255, 99, 132)", "rgb(255, 159, 64)", "rgb(255, 205, 86)", "rgb(75, 192, 192)", "rgb(54, 162, 235)", "rgb(153, 102, 255)", "rgb(201, 203, 207)"],
+                    "borderWidth": 1
+                }]
+            },
+            "options":
+            {
+                "scales":
+                {
+                    "yAxes": [
+                    {
+                        "ticks":
+                        {
+                            "beginAtZero": true
+                        }
+                    }]
+                }
+            }
+        });
+
+
+
+
+		var barChartData = {
+			labels: ["1/1/2017", "2/1/2017", "3/1/2017", "4/1/2017", "5/1/2017"],
+			datasets: [{
+				label: "Openness",
+				backgroundColor: "rgba(255, 99, 132, 0.5)",
+				data: [
+					3,
+					4,
+					6,
+                    5,
+                    5
+				]
+			}, {
+				label: "Conscientiousness",
+				backgroundColor: "rgba(45,75,255,0.5)",
+				data: [
+					7,
+					1,
+					2,
+                    5,
+                    5
+				]
+			}, {
+				label: 'Extraversion',
+				backgroundColor: "rgba(255,247,14,0.5)",
+				data: [
+					4,
+                    6,
+                    9,
+                    5,
+                    6,
+				]
+			},
+
+            {
+				label: 'Agreeableness',
+				backgroundColor: "rgba(136,52,198,0.5)",
+				data: [
+					4,
+                    6,
+                    9,
+                    6,
+                    7
+				]
+			},
+
+            {
+				label: 'Neuroticism',
+				backgroundColor: "rgba(255,19,31,0.5)",
+				data: [
+					4,
+                    6,
+                    9,
+                    8,
+                    3
+				]
+			}
+
+            ]
+
+		};
+		window.onload = function() {
+			var ctx = document.getElementById('personalityStackedBarchart').getContext('2d');
+			window.myBar = new Chart(ctx, {
+				type: 'bar',
+				data: barChartData,
+				options: {
+					title: {
+						display: true,
+						text: ''
+					},
+					tooltips: {
+						mode: 'index',
+						intersect: false
+					},
+					responsive: true,
+					scales: {
+						xAxes: [{
+							stacked: true,
+						}],
+						yAxes: [{
+							stacked: true
+						}]
+					}
+				}
+			});
+		};
+
+		document.getElementById('randomizeData').addEventListener('click', function() {
+			barChartData.datasets.forEach(function(dataset) {
+				dataset.data = dataset.data.map(function() {
+					return randomScalingFactor();
+				});
+			});
+			window.myBar.update();
+		});
+
+
+
+
+	</script>
+
+{% endblock javascripts %}

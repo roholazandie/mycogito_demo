@@ -1,0 +1,417 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} MyCogito {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+	<div class="content">
+		<div class="panel-header bg-primary-gradient">
+			<div class="page-inner py-5">
+				<div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
+					<div>
+						<h2 class="text-white pb-2 fw-bold">MyCogito</h2>
+						<h5 class="text-white op-7 mb-2">dddd</h5>
+					</div>
+					<div class="ml-md-auto py-2 py-md-0">
+						<a href="#" class="btn btn-white btn-border btn-round mr-2">Manage</a>
+						<a href="#" class="btn btn-secondary btn-round">Add Customer</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="page-inner mt--5">
+			<div class="row mt--2">
+				<div class="col-md-7">
+					<div class="card">
+						<div class="card-body">
+                            <div class="card-header">
+                                <div class="card-title">Social Media Activities</div>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart-container">
+                                    <canvas id="socialActivityChart"></canvas>
+                                </div>
+                            </div>
+
+						</div>
+					</div>
+				</div>
+
+                <div class="col-md-5">
+                    <div class="card">
+						<div class="card-header">
+							<div class="card-head-row">
+								<div class="card-title">User Statistics</div>
+								<div class="card-tools">
+									<a href="#" class="btn btn-info btn-border btn-round btn-sm mr-2">
+										<span class="btn-label">
+											<i class="fa fa-pencil"></i>
+										</span>
+										Export
+									</a>
+									<a href="#" class="btn btn-info btn-border btn-round btn-sm">
+										<span class="btn-label">
+											<i class="fa fa-print"></i>
+										</span>
+										Print
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="chart-container" style="min-height: 375px">
+								<!--<canvas id="statisticsChart"></canvas>-->
+                                <div id="myDiv"></div>
+							</div>
+							<div id="myChartLegend"></div>
+						</div>
+					</div>
+                </div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="card full-height">
+						<div class="card-body">
+							<div class="card-title">Activities</div>
+							<div class="row py-3">
+								<div class="col-md-3 d-flex flex-column justify-content-around">
+									<div>
+										<h4 class="fw-bold text-uppercase text-success op-8">Most Used Social App</h4>
+										<h2 class="fw-bold text-warning">Facebook</h2>
+										<h3 class="fw-bold text-danger op-8">9h 4m</h3>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div>
+										<h4 class="fw-bold text-uppercase text-success op-8">Most Social Activity</h4>
+										<h2 class="fw-bold text-warning">Like</h2>
+										<h3 class="fw-bold text-danger op-8">16</h3>
+									</div>
+								</div>
+                                <div class="col-md-3">
+									<div>
+										<h4 class="fw-bold text-uppercase text-success op-8">Most Used Topic</h4>
+										<h2 class="fw-bold text-warning">Rock Climbing</h2>
+										<h3 class="fw-bold text-danger op-8">10</h3>
+									</div>
+								</div>
+                                <div class="col-md-3">
+									<div>
+										<h4 class="fw-bold text-uppercase text-success op-8">Daily Time</h4>
+										<h2 class="fw-bold text-warning">10:00 PM - 11:00 PM</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="row row-card-no-pd">
+				<div class="col-md-12">
+					<div class="card">
+						<div class="card-header">
+							<div class="card-head-row card-tools-still-right">
+								<h4 class="card-title">Users Geolocation</h4>
+								<div class="card-tools">
+									<button class="btn btn-icon btn-link btn-primary btn-xs"><span class="fa fa-angle-down"></span></button>
+									<button class="btn btn-icon btn-link btn-primary btn-xs btn-refresh-card"><span class="fa fa-sync-alt"></span></button>
+									<button class="btn btn-icon btn-link btn-primary btn-xs"><span class="fa fa-times"></span></button>
+								</div>
+							</div>
+							<p class="card-category">
+							Map of the distribution of users around the world
+                            </p>
+						</div>
+						<div class="card-body">
+							<div class="row">
+								<div class="col-md-7">
+									<div class="table-responsive table-hover table-sales">
+										<table class="table">
+											<tbody>
+												<tr>
+													<td>
+														<div class="flag">
+															<img src="/static/assets/img/flags/us/Colorado-Flag.ico" style="height: 40px; width: 40px" alt="indonesia">
+														</div>
+													</td>
+													<td>Colorado</td>
+													<td class="text-right">
+														2.320
+													</td>
+													<td class="text-right">
+														42.18%
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="flag">
+															<img src="/static/assets/img/flags/us/Alabama-Flag.ico" style="height: 40px; width: 40px" alt="indonesia">
+														</div>
+													</td>
+													<td>Alabama</td>
+													<td class="text-right">
+														2.320
+													</td>
+													<td class="text-right">
+														42.18%
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="flag">
+															<img src="/static/assets/img/flags/us/Arizona-Flag.ico" style="height: 40px; width: 40px" alt="indonesia">
+														</div>
+													</td>
+													<td>Arizona</td>
+													<td class="text-right">
+														2.320
+													</td>
+													<td class="text-right">
+														42.18%
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="flag">
+															<img src="/static/assets/img/flags/us/Missouri-Flag-16.ico" style="height: 40px; width: 40px" alt="indonesia">
+														</div>
+													</td>
+													<td>Missori</td>
+													<td class="text-right">
+														2.320
+													</td>
+													<td class="text-right">
+														42.18%
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="flag">
+															<img src="/static/assets/img/flags/us/Florida-Flag.ico" style="height: 40px; width: 40px" alt="indonesia">
+														</div>
+													</td>
+													<td>Florida</td>
+													<td class="text-right">
+														2.320
+													</td>
+													<td class="text-right">
+														42.18%
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="flag">
+															<img src="/static/assets/img/flags/us/Oregon-Flag.ico" style="height: 40px; width: 40px" alt="indonesia">
+														</div>
+													</td>
+													<td>Oregon</td>
+													<td class="text-right">
+														2.320
+													</td>
+													<td class="text-right">
+														42.18%
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="col-md-5">
+									<div class="mapcontainer">
+										<div id="us-map" class="vmap"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+	<!-- Atlantis DEMO methods, don't include it in your project! -->
+	<script src="/static/assets/js/setting-demo.js"></script>
+	<script src="/static/assets/js/demo.js"></script>
+
+	<script>
+		Circles.create({
+			id:'circles-1',
+			radius:45,
+			value:60,
+			maxValue:100,
+			width:7,
+			text: 5,
+			colors:['#f1f1f1', '#FF9E27'],
+			duration:400,
+			wrpClass:'circles-wrp',
+			textClass:'circles-text',
+			styleWrapper:true,
+			styleText:true
+		});
+
+		Circles.create({
+			id:'circles-2',
+			radius:45,
+			value:70,
+			maxValue:100,
+			width:7,
+			text: 36,
+			colors:['#f1f1f1', '#2BB930'],
+			duration:400,
+			wrpClass:'circles-wrp',
+			textClass:'circles-text',
+			styleWrapper:true,
+			styleText:true
+		});
+
+		Circles.create({
+			id:'circles-3',
+			radius:45,
+			value:40,
+			maxValue:100,
+			width:7,
+			text: 12,
+			colors:['#f1f1f1', '#F25961'],
+			duration:400,
+			wrpClass:'circles-wrp',
+			textClass:'circles-text',
+			styleWrapper:true,
+			styleText:true
+		});
+
+		var socialActivityChart = document.getElementById('socialActivityChart').getContext('2d');
+
+
+		var socialActivityChartData = {
+		    labels: ["Beauty", "Dance", "RockClimbing", "AI Jon"],
+            datasets: [{
+		        label: "Likes",
+                backgroundColor: '#59d05d',
+                borderColor: '#59d05d',
+                data: [40,50,60,70]
+            },
+               {
+		        label: "Posts",
+                backgroundColor: '#fdaf4b',
+                borderColor: '#fdaf4b',
+                data: [50,50,60,70]
+            },
+                {
+		        backgroundColor: '#177dff',
+                borderColor: '#177dff',
+                data: [10,50,60,70]
+            }
+
+            ]
+        };
+
+        var mySocialActivityChart = new Chart(socialActivityChart, {
+            type: 'bar',
+            data: socialActivityChartData,
+            options: {
+				responsive: true,
+				maintainAspectRatio: false,
+				legend: {
+					position: "bottom"
+				},
+                title: {
+				    display: true,
+                    text: "Social Activities"
+                },
+                tooltips: {
+					mode: 'index',
+					intersect: false
+				},
+				scales: {
+					yAxes: [{
+					    stacked: true,
+					}],
+					xAxes : [ {
+					    stacked: true,
+					}]
+				},
+			}
+
+        });
+
+
+        var data = [{
+          type: "sunburst",
+          ids: [
+            "Instagram", "Twitter", "Facebook", "Linkedin",
+            "Dance", "Fun", "Nature", "Design", "Sport", "Friends", "Thanksgiving", "Jobs", "Voice",
+              "Like", "Post", "Interest"
+          ],
+          labels: [
+            "Instagram", "Twitter", "Facebook", "Linkedin",
+            "Dance", "Fun", "Nature", "Design", "Sport", "Friends", "Thanksgiving", "Jobs", "Voice",
+              "Like", "Post", "Interest"
+          ],
+          parents: [
+            "", "", "", "",
+              "Instagram", "Instagram", "Instagram", "Twitter", "Twitter", "Facebook", "Facebook", "Linkedin", "Linkedin",
+              "Dance", "Dance", "Fun",
+          ],
+          outsidetextfont: {size: 20, color: "#377eb8"},
+          // leaf: {opacity: 0.4},
+          marker: {line: {width: 2}},
+        }];
+
+        var layout = {
+          margin: {l: 0, r: 0, b: 0, t:0},
+          sunburstcolorway:["#636efa","#ef553b","#00cc96"],
+            plot_bgcolor: 'rgba(0, 0, 0, 0)',
+            paper_bgcolor: 'rgba(0, 0, 0, 0)'
+        };
+
+        var config = {
+           modeBarButtonsToRemove: ['toImage', 'sendDataToCloud'],
+           displaylogo: false
+        };
+
+        Plotly.newPlot('myDiv', data, layout, config);
+
+
+        <!--US map activities-->
+        jQuery('#us-map').vectorMap({
+            map: 'usa_en',
+            backgroundColor: null,
+            color: '#686868',
+            enableZoom: true,
+            showTooltip: true,
+            selectedColor: null,
+            hoverColor: null,
+            colors: {
+                mo: '#2980b9',
+                fl: '#ff0b00',
+                or: '#8e44ad',
+                co: '#1b33ad'
+            },
+            onRegionClick: function(event, code, region){
+                event.preventDefault();
+            }
+        });
+
+
+		$('#lineChart').sparkline([105,103,123,100,95,105,115], {
+			type: 'line',
+			height: '70',
+			width: '100%',
+			lineWidth: '2',
+			lineColor: '#ffa534',
+			fillColor: 'rgba(255, 165, 52, .14)'
+		});
+	</script>
+
+{% endblock javascripts %}
