@@ -1,1 +1,1 @@
-web: gunicorn herokudjango.wsgi
+web: gunicorn mycogito_demo.wsgi
