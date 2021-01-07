@@ -2,7 +2,7 @@
 """
 Copyright (c) 2019 - present AppSeed.us
 """
-
+import django_heroku
 import os
 from decouple import config
 from unipath import Path
@@ -125,3 +125,4 @@ STATICFILES_DIRS = (
 )
 #############################################################
 #############################################################
+django_heroku.settings(locals())

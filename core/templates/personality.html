@@ -22,7 +22,7 @@
 		</div>
 		<div class="page-inner mt--5">
 			<div class="row">
-				<div class="col-md-8 full-height">
+				<div class="col-md-6 full-height">
 					<div class="card">
                         <div class="card-header">
                             <div class="card-head-row">
@@ -48,8 +48,8 @@
 						</div>
 					</div>
 				</div>
-                <div class="col-md-4">
-					<div class="card">
+                <div class="col-md-6 full-height">
+					<div class="card full-height">
                         <div class="card-header">
                             <div class="card-head-row">
 								<div class="card-title">Personality through time</div>
@@ -71,30 +71,6 @@
                         </div>
                     </div>
 
-                    <div class="card">
-						<div class="card-header">
-							<div class="card-head-row">
-								<div class="card-title">Time Spent</div>
-								<div class="card-tools">
-									<div class="card-tools">
-                                    <ul class="pagination pg-primary">
-                                        <li class="page-item active"><a class="page-link" href="#">1D</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">1W</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">1M</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">1Y</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">5Y</a></li>
-                                    </ul>
-								</div>
-								</div>
-							</div>
-						</div>
-						<div class="card-body">
-							<div class="chart-container" style="min-height: 375px">
-								<canvas id="barchart-interests"></canvas>
-							</div>
-						</div>
-					</div>
-
 
                 </div>
 
@@ -104,35 +80,18 @@
 				<div class="col-md-12">
 					<div class="card full-height">
 						<div class="card-body">
-							<div class="card-title">Activities</div>
+							<div class="card-title">Results:</div>
 							<div class="row py-3">
-								<div class="col-md-3 d-flex flex-column justify-content-around">
+								<div class="col-md-12 d-flex flex-column justify-content-around">
 									<div>
-										<h4 class="fw-bold text-uppercase text-success op-8">Most Used Website</h4>
-										<h2 class="fw-bold text-warning">Google</h2>
-										<h3 class="fw-bold text-danger op-8">9h 4m</h3>
+										<h2 class="fw-bold text-warning">
+                                            By analyzing at least 195 posts you liked on facebook, instagram and twitter, we assessed your personality and found
+                                            you scored high in Openness which indicates you are creative, imaginative and adventurous.
+
+                                        </h2>
 									</div>
 								</div>
-								<div class="col-md-3">
-									<div>
-										<h4 class="fw-bold text-uppercase text-success op-8">Social Activity</h4>
-										<h2 class="fw-bold text-warning">Like</h2>
-										<h3 class="fw-bold text-danger op-8">16</h3>
-									</div>
-								</div>
-                                <div class="col-md-3">
-									<div>
-										<h4 class="fw-bold text-uppercase text-success op-8">Most Used Topic</h4>
-										<h2 class="fw-bold text-warning">Rock Climbing</h2>
-										<h3 class="fw-bold text-danger op-8">10</h3>
-									</div>
-								</div>
-                                <div class="col-md-3">
-									<div>
-										<h4 class="fw-bold text-uppercase text-success op-8">Daily Time</h4>
-										<h2 class="fw-bold text-warning">10:00 PM - 11:00 PM</h2>
-									</div>
-								</div>
+
 							</div>
 						</div>
 					</div>
@@ -207,42 +166,6 @@
                     },
 			}
 		});
-
-
-
-
-
-
-        new Chart(document.getElementById("barchart-interests"),
-        {
-            "type": "bar",
-            "data":
-            {
-                "labels": ["Beauty", "Dance", "Rockclimbing", "AI Jobs", "Politics", "Finance", "Election"],
-                "datasets": [
-                {
-                    "label": "",
-                    "data": [65, 59, 80, 81, 56, 55, 40],
-                    "fill": false,
-                    "backgroundColor": ["rgba(255, 99, 132, 0.5)", "rgba(255, 159, 64, 0.5)", "rgba(255, 205, 86, 0.5)", "rgba(75, 192, 192, 0.5)", "rgba(54, 162, 235, 0.5)", "rgba(153, 102, 255, 0.5)", "rgba(201, 203, 207, 0.2)"],
-                    "borderColor": ["rgb(255, 99, 132)", "rgb(255, 159, 64)", "rgb(255, 205, 86)", "rgb(75, 192, 192)", "rgb(54, 162, 235)", "rgb(153, 102, 255)", "rgb(201, 203, 207)"],
-                    "borderWidth": 1
-                }]
-            },
-            "options":
-            {
-                "scales":
-                {
-                    "yAxes": [
-                    {
-                        "ticks":
-                        {
-                            "beginAtZero": true
-                        }
-                    }]
-                }
-            }
-        });
 
 
 
