@@ -1,1 +1,1 @@
-web: gunicorn mycogito_demo.wsgi
+web: gunicorn core.wsgi
