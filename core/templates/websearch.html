@@ -72,7 +72,7 @@
 					<div class="card full-height" style="background-color: #181743">
                         <div class="card-header">
                             <div class="card-head-row">
-                                <div class="card-title align-items-center">Interests Graph</div>
+                                <div class="card-title align-items-center">History Search by Topic</div>
                                 <div class="card-tools">
                                     <ul class="pagination pg-primary">
                                         <li class="page-item active"><a class="page-link" href="#">1D</a></li>
@@ -95,7 +95,7 @@
 					<div class="card" style="background-color: #181743">
                         <div class="card-header">
                             <div class="card-head-row">
-								<div class="card-title">Web site history</div>
+								<div class="card-title">History Search by Website</div>
                                 <div class="card-tools">
                                     <ul class="pagination pg-primary">
                                         <li class="page-item active"><a class="page-link" href="#">1D</a></li>
@@ -150,7 +150,7 @@
 					<div class="card" style="background-color: #181743">
 						<div class="card-header">
 							<div class="card-head-row">
-								<div class="card-title">User Statistics</div>
+								<div class="card-title">Interests over time</div>
 								<div class="card-tools">
 									<a href="#" class="btn btn-info btn-border btn-round btn-sm mr-2">
 										<span class="btn-label">
@@ -385,7 +385,7 @@ function draw() {
                 data: {
                     labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
                     datasets: [ {
-                        label: "Subscribers",
+                        label: "Beauty",
                         borderColor: '#FF2C63',
                         pointBackgroundColor: 'rgb(255, 44, 99)',
                         pointRadius: 0,
@@ -395,7 +395,7 @@ function draw() {
                         borderWidth: 2,
                         data: [154, 184, 175, 203, 210, 231, 240, 278, 252, 312, 320, 374]
                     }, {
-                        label: "New Visitors",
+                        label: "Dance",
                         borderColor: '#FFDB01',
                         pointBackgroundColor: 'rgb(255, 219, 1, 0.7)',
                         pointRadius: 0,
@@ -405,7 +405,7 @@ function draw() {
                         borderWidth: 2,
                         data: [256, 230, 245, 287, 240, 250, 230, 295, 331, 431, 456, 521]
                     }, {
-                        label: "Active Users",
+                        label: "Jobs",
                         borderColor: '#19D895',
                         pointBackgroundColor: 'rgba(23, 125, 255, 0.6)',
                         pointRadius: 0,
@@ -414,13 +414,28 @@ function draw() {
                         fill: true,
                         borderWidth: 2,
                         data: [542, 480, 430, 550, 530, 453, 380, 434, 568, 610, 700, 900]
-                    }]
+                    },
+                    {
+                        label: "Politics",
+                        borderColor: '#51ABFF',
+                        pointBackgroundColor: 'rgba(23, 125, 255, 0.6)',
+                        pointRadius: 0,
+                        backgroundColor: 'rgb(81, 171, 255, 0.7)',
+                        legendColor: '#177dff',
+                        fill: true,
+                        borderWidth: 2,
+                        data: [333, 480, 430, 89, 530, 122, 380, 123, 568, 780, 12, 77]
+                    }
+
+
+
+                    ]
                 },
                 options : {
                     responsive: true,
                     maintainAspectRatio: false,
                     legend: {
-                        display: false
+                        display: true
                     },
                     tooltips: {
                         bodySpacing: 4,
@@ -478,15 +493,6 @@ function draw() {
                 }
             });
 
-
-		$('#lineChart').sparkline([105,103,123,100,95,105,115], {
-			type: 'line',
-			height: '70',
-			width: '100%',
-			lineWidth: '2',
-			lineColor: '#ffa534',
-			fillColor: 'rgba(255, 165, 52, .14)'
-		});
 	</script>
 
 {% endblock javascripts %}
