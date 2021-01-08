@@ -8,22 +8,61 @@
 {% block content %}
 
 	<div class="content">
-		<div class="panel-header bg-primary-gradient">
+		<div class="panel-header personality-gradient">
 			<div class="page-inner py-5">
 				<div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
 					<div>
-						<h2 class="text-white pb-2 fw-bold">MyCogito</h2>
+						<h2 class="text-white pb-2 fw-bold"  style="font-size: 50px">Personality Analysis</h2>
+                        <h5 class="text-white op-7 mb-2 ml12" style="font-size: 20px;">Personality anaylsis results are here</h5>
+
 					</div>
+
 					<div class="ml-md-auto py-2 py-md-0">
 						<a href="#" class="btn btn-white btn-border btn-round mr-2">Manage</a>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="page-inner mt--5">
+
+
+
+		<div class="page-inner mt--5 cogito-background">
+
+            <div class="row">
+				<div class="col-md-12">
+					<div class="card full-height" style="background-color: #181743">
+						<div class="card-body">
+							<div class="card-title">Results:</div>
+							<div class="row py-3">
+								<div class="col-md-12 d-flex flex-column justify-content-around">
+									<div>
+                                        <h1 class="ml11">
+                                            <span class="text-wrapper">
+                                                <span class="line line1"></span>
+                                                <span class="letters">
+                                                    By analyzing at least 195 posts you liked on facebook, instagram and twitter, we assessed your personality and found
+                                                     you scored high in Openness which indicates you are creative, imaginative and adventurous.
+                                                </span>
+                                            </span>
+
+                                        </h1>
+
+
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+
+
 			<div class="row">
 				<div class="col-md-6 full-height">
-					<div class="card">
+					<div class="card" style="background-color: #181743">
                         <div class="card-header">
                             <div class="card-head-row">
                                 <div class="card-title align-items-center">Personality</div>
@@ -49,7 +88,7 @@
 					</div>
 				</div>
                 <div class="col-md-6 full-height">
-					<div class="card full-height">
+					<div class="card full-height" style="background-color: #181743">
                         <div class="card-header">
                             <div class="card-head-row">
 								<div class="card-title">Personality through time</div>
@@ -75,32 +114,6 @@
                 </div>
 
 			</div>
-
-            <div class="row">
-				<div class="col-md-12">
-					<div class="card full-height">
-						<div class="card-body">
-							<div class="card-title">Results:</div>
-							<div class="row py-3">
-								<div class="col-md-12 d-flex flex-column justify-content-around">
-									<div>
-										<h2 class="fw-bold text-warning">
-                                            By analyzing at least 195 posts you liked on facebook, instagram and twitter, we assessed your personality and found
-                                            you scored high in Openness which indicates you are creative, imaginative and adventurous.
-
-                                        </h2>
-									</div>
-								</div>
-
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-
-
-
 
 
 
@@ -128,11 +141,11 @@
                         label: "Personality Traits",
                         data: [30, 40, 70, 10, 90],
                         fill: true,
-                        backgroundColor: "rgba(255,255,255,0.4)",
-                        borderColor: "rgb(255, 99, 132)",
-                        pointBackgroundColor: "rgb(255,19,31)",
-                        pointBorderColor: "#fff",
-                        pointHoverBackgroundColor: "#fff",
+                        backgroundColor: "rgba(166,169,170,0.4)",
+                        borderColor: "#FF2C63",
+                        pointBackgroundColor: "#FF2C63",
+                        pointBorderColor: "#7D63D3",
+                        pointHoverBackgroundColor: "#19D895",
                         pointHoverBorderColor: "rgb(255, 99, 132)"
                     }
                 ]
@@ -145,7 +158,7 @@
                     display: true,
                     labels: {
 					    fontSize: 10,
-                        fontColor: "rgb(255, 99, 132)"
+                        fontColor: "#FF2C63"
                     },
 
 				},
@@ -154,14 +167,18 @@
 				scale: {
                       reverse: false,
                       gridLines: {
-                        color: ['black', 'red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
+                        color: "#7D63D3"//['black', 'red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
                       },
                       ticks: {
                         beginAtZero: true
                       },
                       pointLabels: {
                         fontSize: 20,
-                          fontColor: "rgb(166,169,170)"
+                          fontColor: ["#FF2C63",
+                              "#FFDB01",
+                              "#7D63D3",
+                              "#51ABFF",
+                              "#19D895"]
                       },
                     },
 			}
@@ -174,7 +191,7 @@
 			labels: ["1/1/2017", "2/1/2017", "3/1/2017", "4/1/2017", "5/1/2017"],
 			datasets: [{
 				label: "Openness",
-				backgroundColor: "rgba(255, 99, 132, 0.5)",
+				backgroundColor: "#FFDB01",
 				data: [
 					3,
 					4,
@@ -184,7 +201,7 @@
 				]
 			}, {
 				label: "Conscientiousness",
-				backgroundColor: "rgba(45,75,255,0.5)",
+				backgroundColor: "#FF2C63",
 				data: [
 					7,
 					1,
@@ -194,7 +211,7 @@
 				]
 			}, {
 				label: 'Extraversion',
-				backgroundColor: "rgba(255,247,14,0.5)",
+				backgroundColor: "#7D63D3",
 				data: [
 					4,
                     6,
@@ -206,7 +223,7 @@
 
             {
 				label: 'Agreeableness',
-				backgroundColor: "rgba(136,52,198,0.5)",
+				backgroundColor: "#51ABFF",
 				data: [
 					4,
                     6,
@@ -218,7 +235,7 @@
 
             {
 				label: 'Neuroticism',
-				backgroundColor: "rgba(255,19,31,0.5)",
+				backgroundColor: "#19D895",
 				data: [
 					4,
                     6,
@@ -237,6 +254,13 @@
 				type: 'bar',
 				data: barChartData,
 				options: {
+				    legend: {
+                        position: "bottom",
+                        labels: {
+                            fontColor: "#ededed",
+                            fontSize: 15,
+                        }
+                    },
 					title: {
 						display: true,
 						text: ''
@@ -249,27 +273,31 @@
 					scales: {
 						xAxes: [{
 							stacked: true,
+                            ticks: {
+                                beginAtZero: true,
+                                fontColor: "#ededed",
+                                fontSize: 15,
+                            }
 						}],
 						yAxes: [{
-							stacked: true
+							stacked: true,
+                            ticks: {
+                                beginAtZero: true,
+                                fontColor: "#ededed",
+                                fontSize: 15,
+                            }
 						}]
 					}
 				}
 			});
 		};
 
-		document.getElementById('randomizeData').addEventListener('click', function() {
-			barChartData.datasets.forEach(function(dataset) {
-				dataset.data = dataset.data.map(function() {
-					return randomScalingFactor();
-				});
-			});
-			window.myBar.update();
-		});
 
 
 
 
-	</script>
+
+
+    </script>
 
 {% endblock javascripts %}

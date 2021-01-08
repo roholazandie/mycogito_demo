@@ -8,11 +8,12 @@
 {% block content %}
 
 	<div class="content">
-		<div class="panel-header bg-primary-gradient">
+		<div class="panel-header search-gradient">
 			<div class="page-inner py-5">
 				<div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
 					<div>
-						<h2 class="text-white pb-2 fw-bold">MyCogito</h2>
+						<h2 class="text-white pb-2 fw-bold"  style="font-size: 50px">Web Search Footprints</h2>
+                        <h5 class="text-white ml12">It's been 5 days you have been taking control of your web search history</h5>
 					</div>
 					<div class="ml-md-auto py-2 py-md-0">
 						<a href="#" class="btn btn-white btn-border btn-round mr-2">Manage</a>
@@ -20,10 +21,55 @@
 				</div>
 			</div>
 		</div>
-		<div class="page-inner mt--5">
+		<div class="page-inner mt--5 cogito-background">
+
+            <div class="row">
+				<div class="col-md-12">
+					<div class="card full-height" style="background-color: #181743">
+						<div class="card-body">
+							<div class="card-title">Activities</div>
+							<div class="row py-3">
+								<div class="col-md-3 d-flex flex-column justify-content-around">
+									<div>
+										<h4 class="fw-bold text-uppercase op-8 cogito-pink">Most Used Website</h4>
+										<h2 class="fw-bold cogito-yellow">Google</h2>
+										<h3 class="fw-bold cogito-white op-8">9h 4m</h3>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div>
+										<h4 class="fw-bold text-uppercase cogito-pink op-8">Social Activity</h4>
+										<h2 class="fw-bold cogito-yellow">Like</h2>
+										<h3 class="fw-bold cogito-white op-8">16</h3>
+									</div>
+								</div>
+                                <div class="col-md-3">
+									<div>
+										<h4 class="fw-bold text-uppercase cogito-pink op-8">Most Used Topic</h4>
+										<h2 class="fw-bold cogito-yellow">Rock Climbing</h2>
+										<h3 class="fw-bold cogito-white op-8">10</h3>
+									</div>
+								</div>
+                                <div class="col-md-3">
+									<div>
+										<h4 class="fw-bold text-uppercase cogito-pink op-8">Peak Time</h4>
+										<h4 class="fw-bold text-uppercase cogito-yellow">Daily Time</h4>
+										<h2 class="fw-bold cogito-white">10:00 PM - 11:00 PM</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+
+
+
 			<div class="row">
-				<div class="col-md-8 full-height">
-					<div class="card">
+				<div class="col-md-8">
+					<div class="card full-height" style="background-color: #181743">
                         <div class="card-header">
                             <div class="card-head-row">
                                 <div class="card-title align-items-center">Interests Graph</div>
@@ -46,7 +92,7 @@
 					</div>
 				</div>
                 <div class="col-md-4">
-					<div class="card">
+					<div class="card" style="background-color: #181743">
                         <div class="card-header">
                             <div class="card-head-row">
 								<div class="card-title">Web site history</div>
@@ -68,7 +114,7 @@
                         </div>
                     </div>
 
-                    <div class="card">
+                    <div class="card" style="background-color: #181743">
 						<div class="card-header">
 							<div class="card-head-row">
 								<div class="card-title">Time Spent</div>
@@ -97,50 +143,11 @@
 
 			</div>
 
-            <div class="row">
-				<div class="col-md-12">
-					<div class="card full-height">
-						<div class="card-body">
-							<div class="card-title">Activities</div>
-							<div class="row py-3">
-								<div class="col-md-3 d-flex flex-column justify-content-around">
-									<div>
-										<h4 class="fw-bold text-uppercase text-success op-8">Most Used Website</h4>
-										<h2 class="fw-bold text-warning">Google</h2>
-										<h3 class="fw-bold text-danger op-8">9h 4m</h3>
-									</div>
-								</div>
-								<div class="col-md-3">
-									<div>
-										<h4 class="fw-bold text-uppercase text-success op-8">Social Activity</h4>
-										<h2 class="fw-bold text-warning">Like</h2>
-										<h3 class="fw-bold text-danger op-8">16</h3>
-									</div>
-								</div>
-                                <div class="col-md-3">
-									<div>
-										<h4 class="fw-bold text-uppercase text-success op-8">Most Used Topic</h4>
-										<h2 class="fw-bold text-warning">Rock Climbing</h2>
-										<h3 class="fw-bold text-danger op-8">10</h3>
-									</div>
-								</div>
-                                <div class="col-md-3">
-									<div>
-										<h4 class="fw-bold text-uppercase text-success op-8">Daily Time</h4>
-										<h2 class="fw-bold text-warning">10:00 PM - 11:00 PM</h2>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</div>
 
 
             <div class="row">
 				<div class="col-md-12">
-					<div class="card">
+					<div class="card" style="background-color: #181743">
 						<div class="card-header">
 							<div class="card-head-row">
 								<div class="card-title">User Statistics</div>
@@ -293,10 +300,10 @@ function draw() {
                 {
                     "label": "website visit",
                     "data": [300, 50, 100, 30],
-                    "backgroundColor": ["rgb(255, 99, 132)",
-                                    "rgb(54, 162, 235)",
-                                    "rgb(255, 205, 86)",
-                                    "rgb(255,11,0)"]
+                    "backgroundColor": ["#FF2C63",
+                                        "#51ABFF",
+                                        "#FFDB01",
+                                        "#19D895"]
                 }]
             },
             'options': {
@@ -314,29 +321,53 @@ function draw() {
 
         new Chart(document.getElementById("barchart-interests"),
         {
-            "type": "bar",
-            "data":
+            type: "bar",
+            data:
             {
-                "labels": ["Beauty", "Dance", "Rockclimbing", "AI Jobs", "Politics", "Finance", "Election"],
-                "datasets": [
+                labels: ["Beauty", "Dance", "Rockclimbing", "AI Jobs", "Politics", "Finance", "Election"],
+                datasets: [
                 {
-                    "label": "",
-                    "data": [65, 59, 80, 81, 56, 55, 40],
-                    "fill": false,
-                    "backgroundColor": ["rgba(255, 99, 132, 0.5)", "rgba(255, 159, 64, 0.5)", "rgba(255, 205, 86, 0.5)", "rgba(75, 192, 192, 0.5)", "rgba(54, 162, 235, 0.5)", "rgba(153, 102, 255, 0.5)", "rgba(201, 203, 207, 0.2)"],
-                    "borderColor": ["rgb(255, 99, 132)", "rgb(255, 159, 64)", "rgb(255, 205, 86)", "rgb(75, 192, 192)", "rgb(54, 162, 235)", "rgb(153, 102, 255)", "rgb(201, 203, 207)"],
-                    "borderWidth": 1
+                    label: "",
+                    data: [65, 59, 80, 81, 56, 55, 40],
+                    fill: false,
+                    backgroundColor: [
+                        "#FF2C63",
+                        "#FFDB01",
+                        "#51ABFF",
+                        "#19D895",
+                        "#7D63D3",
+                        "#FFAA02",
+                        "#ededed"
+                    ],
+                    borderColor: ["#FF2C63",
+                                    "#FFDB01",
+                                    "#51ABFF",
+                                    "#19D895",
+                                    "#7D63D3",
+                                    "#FFAA02",
+                                    "#ededed"],
+                    borderWidth: 1
                 }]
             },
-            "options":
+            options:
             {
-                "scales":
+                scales:
                 {
-                    "yAxes": [
+                    xAxes : [ {
+					    stacked: true,
+                        ticks: {
+                            fontColor: "#ededed",
+                            fontSize: 13,
+                        },
+					}],
+
+                    yAxes: [
                     {
-                        "ticks":
+                        ticks:
                         {
-                            "beginAtZero": true
+                            beginAtZero: true,
+                            fontColor: "#ededed",
+                            fontSize: 15,
                         }
                     }]
                 }
@@ -355,30 +386,30 @@ function draw() {
                     labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
                     datasets: [ {
                         label: "Subscribers",
-                        borderColor: '#f3545d',
-                        pointBackgroundColor: 'rgba(243, 84, 93, 0.6)',
+                        borderColor: '#FF2C63',
+                        pointBackgroundColor: 'rgb(255, 44, 99)',
                         pointRadius: 0,
-                        backgroundColor: 'rgba(243, 84, 93, 0.4)',
+                        backgroundColor: 'rgb(255, 44, 99, 0.7)',
                         legendColor: '#f3545d',
                         fill: true,
                         borderWidth: 2,
                         data: [154, 184, 175, 203, 210, 231, 240, 278, 252, 312, 320, 374]
                     }, {
                         label: "New Visitors",
-                        borderColor: '#fdaf4b',
-                        pointBackgroundColor: 'rgba(253, 175, 75, 0.6)',
+                        borderColor: '#FFDB01',
+                        pointBackgroundColor: 'rgb(255, 219, 1, 0.7)',
                         pointRadius: 0,
-                        backgroundColor: 'rgba(253, 175, 75, 0.4)',
+                        backgroundColor: 'rgb(255, 219, 1, 0.7)',
                         legendColor: '#fdaf4b',
                         fill: true,
                         borderWidth: 2,
                         data: [256, 230, 245, 287, 240, 250, 230, 295, 331, 431, 456, 521]
                     }, {
                         label: "Active Users",
-                        borderColor: '#177dff',
+                        borderColor: '#19D895',
                         pointBackgroundColor: 'rgba(23, 125, 255, 0.6)',
                         pointRadius: 0,
-                        backgroundColor: 'rgba(23, 125, 255, 0.4)',
+                        backgroundColor: 'rgb(25, 216, 149, 0.7)',
                         legendColor: '#177dff',
                         fill: true,
                         borderWidth: 2,
@@ -409,7 +440,9 @@ function draw() {
                                 fontStyle: "500",
                                 beginAtZero: false,
                                 maxTicksLimit: 5,
-                                padding: 10
+                                padding: 10,
+                                fontColor: '#ffffff',
+                                fontSize: 18
                             },
                             gridLines: {
                                 drawTicks: false,
@@ -418,11 +451,14 @@ function draw() {
                         }],
                         xAxes: [{
                             gridLines: {
-                                zeroLineColor: "transparent"
+                                zeroLineColor: "transparent",
+
                             },
                             ticks: {
                                 padding: 10,
-                                fontStyle: "500"
+                                fontStyle: "500",
+                                fontColor: '#ffffff',
+                                fontSize: 18
                             }
                         }]
                     },

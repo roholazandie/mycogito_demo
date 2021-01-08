@@ -1,0 +1,125 @@
+.ml12 {
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.0em;
+}
+
+.ml12 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+
+.ml7 {
+  position: relative;
+  font-weight: 900;
+  font-size: 3.7em;
+}
+.ml7 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+.ml7 .letter {
+  transform-origin: 0 100%;
+  display: inline-block;
+  line-height: 1em;
+}
+
+
+.ml11 {
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+.ml11 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+}
+
+.ml11 .line {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  background-color: #fff;
+  transform-origin: 0 50%;
+}
+
+.ml11 .line1 {
+  top: 0;
+  left: 0;
+}
+
+.ml11 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+
+
+
+.main-gradient {
+    background: rgb(255,44,99);
+    background: linear-gradient(90deg, rgba(255,44,99,1) 0%, rgba(24,23,67,1) 65%, rgba(24,23,67,1) 100%);
+}
+
+.search-gradient {
+    background: rgb(81,171,255);
+    background: linear-gradient(90deg, rgba(81,171,255,1) 0%, rgba(24,23,67,1) 65%, rgba(24,23,67,1) 100%);
+}
+
+.personality-gradient {
+    background: rgb(25,216,149);
+    background: linear-gradient(90deg, rgba(25,216,149,1) 0%, rgba(24,23,67,1) 65%, rgba(24,23,67,1) 100%);
+}
+
+.social-gradinet {
+   background: rgb(255,170,2);
+    background: linear-gradient(90deg, rgba(255,170,2,1) 0%, rgba(24,23,67,1) 65%, rgba(24,23,67,1) 100%);
+}
+
+
+.cogito-background {
+    background-color: #16152e;
+}
+
+.cogito-pink {
+    color: #FF2C63;
+}
+
+.cogito-white {
+    color: #ededed;
+}
+
+.cogito-yellow {
+    color: #FFDB01;
+}
+
+.cogito-purple {
+    color: #7D63D3;
+}
+
+.cogito-blue {
+    color: #51ABFF;
+}
+
+.cogito-orange {
+    color: #FFAA02;
+}
+
+.cogito-green {
+   color: #19D895;
+}
+
+.location-table td {
+  font-size: 24px;
+}

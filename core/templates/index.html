@@ -4,16 +4,18 @@
 
 <!-- Specific Page CSS goes HERE  -->
 {% block stylesheets %}{% endblock stylesheets %}
-
 {% block content %}
 
 	<div class="content">
-		<div class="panel-header bg-info-gradient">
+		<div class="panel-header main-gradient">
 			<div class="page-inner py-5">
 				<div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
 					<div>
-						<h2 class="text-white pb-2 fw-bold" style="font-family: yeon_sung; font-size: 50px">MyCogito</h2>
-						<h5 class="text-white op-7 mb-2" style="font-size: 20px;">The platform you know yourself better</h5>
+                        <h2 class= "text-white pb-2 fw-bold" style="font-family: yeon_sung; font-size: 50px">
+                            <span class="letters">MyCogito</span>
+                        </h2>
+
+						<h5 class="text-white op-7 mb-2 ml12" style="font-size: 20px;">The platform you know yourself better</h5>
 					</div>
 					<div class="ml-md-auto py-2 py-md-0">
 						<a href="#" class="btn btn-white btn-border btn-round mr-2">Manage</a>
@@ -21,83 +23,113 @@
 				</div>
 			</div>
 		</div>
-		<div class="page-inner mt--5">
+		<div class="page-inner mt--5 cogito-background">
 			<div class="row mt--2">
-				<div class="col-md-6">
-					<div class="card full-height">
+				<div class="col-md-4">
+					<div class="card full-height curves-shadow" style="background-color: #181743">
 						<div class="card-body">
 							<div class="card-title">Profile</div>
                             <div class="row">
-                                <div class="col-md-2">
-                                    <h4 class="fw-bold mt-3 mb-0" style="color: #fb07e3">Full Name:</h4>
+                                <div class="col-md-4">
+                                    <h4 class="fw-bold mt-3 mb-0 cogito-pink" >Full Name:</h4>
                                 </div>
-                                <div class="col-md-9">
-                                    <h4 class="mt-3 mb-0" style="color: #ededed" >Johnathan Deo</h4>
-                                </div>
-                            </div>
-
-
-                            <div class="row">
-                                <div class="col-md-2">
-                                    <h4 class="fw-bold mt-3 mb-0" style="color: #097e97">Location:</h4>
-                                </div>
-                                <div class="col-md-9">
-                                    <h4 class="mt-3 mb-0" >USA, Colorado, Denver</h4>
+                                <div class="col-md-8">
+                                    <h4 class="mt-3 mb-0 cogito-white" >Johnathan Deo</h4>
                                 </div>
                             </div>
 
 
                             <div class="row">
-                                <div class="col-md-2">
-                                    <h4 class="fw-bold mt-3 mb-0" style="color: #097e97">Languages:</h4>
+                                <div class="col-md-4">
+                                    <h4 class="fw-bold mt-3 mb-0 cogito-pink">Location:</h4>
                                 </div>
-                                <div class="col-md-9">
-                                    <h4 class="mt-3 mb-0" > English, Spanish</h4>
+                                <div class="col-md-8">
+                                    <h4 class="mt-3 mb-0 cogito-white">USA, Colorado, Denver</h4>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h4 class="fw-bold mt-3 mb-0 cogito-pink">Languages:</h4>
+                                </div>
+                                <div class="col-md-8">
+                                    <h4 class="mt-3 mb-0 cogito-white"> English, Spanish</h4>
                                 </div>
                             </div>
 
 						</div>
 					</div>
 				</div>
-                <div class="col-md-6">
-					<div class="card full-height">
+                <div class="col-md-4">
+					<div class="card full-height curves-shadow" style="background-color: #181743">
 						<div class="card-body">
 							<div class="card-title">Contact</div>
 
                             <div class="row">
-                                <div class="col-md-2">
-                                    <h4 class="fw-bold mt-3 mb-0" style="color: #097e97">Website:</h4>
+                                <div class="col-md-4">
+                                    <h4 class="fw-bold mt-3 mb-0 cogito-pink">Website:</h4>
                                 </div>
-                                <div class="col-md-9">
-                                    <h4 class="mt-3 mb-0" > staradmin.com</h4>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-2">
-                                    <h4 class="fw-bold mt-3 mb-0" style="color: #097e97">Email:</h4>
-                                </div>
-                                <div class="col-md-9">
-                                    <h4 class="mt-3 mb-0" >Richard@staradmin.com</h4>
+                                <div class="col-md-8">
+                                    <h4 class="mt-3 mb-0 cogito-white"> staradmin.com</h4>
                                 </div>
                             </div>
 
                             <div class="row">
-                                <div class="col-md-2">
-                                    <h4 class="fw-bold mt-3 mb-0" style="color: #097e97">Phone:</h4>
+                                <div class="col-md-4">
+                                    <h4 class="fw-bold mt-3 mb-0 cogito-pink">Email:</h4>
                                 </div>
-                                <div class="col-md-9">
-                                    <h4 class="mt-3 mb-0" > +734 6459967</h4>
+                                <div class="col-md-8">
+                                    <h4 class="mt-3 mb-0 cogito-white">Richard@staradmin.com</h4>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h4 class="fw-bold mt-3 mb-0 cogito-pink">Phone:</h4>
+                                </div>
+                                <div class="col-md-8">
+                                    <h4 class="mt-3 mb-0 cogito-white"> +734 6459967</h4>
                                 </div>
                             </div>
 						</div>
 					</div>
 				</div>
 
+
+                <div class="col-md-4">
+					<div class="card full-height" style="background-color: #181743">
+						<div class="card-body curves-shadow">
+							<div class="card-title">Connected devices</div>
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="avatar avatar-xxl">
+                                        <img src="/static/assets/img/iphone.png" alt="..." class="avatar-img">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="avatar avatar-xxl">
+                                        <img src="/static/assets/img/macbook.png" alt="..." class="avatar-img">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="avatar avatar-xxl">
+                                        <img src="/static/assets/img/iwatch.png" alt="..." class="avatar-img">
+                                    </div>
+                                </div>
+                            </div>
+
+
+						</div>
+					</div>
+				</div>
+
+
 			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<div class="card">
+					<div class="card" style="background-color: #181743">
 						<div class="card-header">
 							<div class="card-title">Synced Apps</div>
 						</div>
@@ -106,15 +138,15 @@
 							<table class="table mt-3">
 								<thead>
 									<tr>
-                                        <th scope="col"><h3 class="fw-bold">Web Search</h3></th>
-                                        <th scope="col"><h3 class="fw-bold">Email</h3></th>
-                                        <th scope="col"><h3 class="fw-bold">Streaming</h3></th>
-                                        <th scope="col"><h3 class="fw-bold">Social Media</h3></th>
-                                        <th scope="col"><h3 class="fw-bold">Communication</h3></th>
-                                        <th scope="col"><h3 class="fw-bold">Finance</h3></th>
-                                        <th scope="col"><h3 class="fw-bold">Shopping</h3></th>
-                                        <th scope="col"><h3 class="fw-bold">Health</h3></th>
-                                        <th scope="col"><h3 class="fw-bold">Music</h3></th>
+                                        <th scope="col"><h3 class="fw-bold" style="color: #FF2C63">Web Search</h3></th>
+                                        <th scope="col"><h3 class="fw-bold" style="color: #FF2C63">Email</h3></th>
+                                        <th scope="col"><h3 class="fw-bold" style="color: #FF2C63">Streaming</h3></th>
+                                        <th scope="col"><h3 class="fw-bold" style="color: #FF2C63">Social Media</h3></th>
+                                        <th scope="col"><h3 class="fw-bold" style="color: #FF2C63">Communication</h3></th>
+                                        <th scope="col"><h3 class="fw-bold" style="color: #FF2C63">Finance</h3></th>
+                                        <th scope="col"><h3 class="fw-bold" style="color: #FF2C63">Shopping</h3></th>
+                                        <th scope="col"><h3 class="fw-bold" style="color: #FF2C63">Health</h3></th>
+                                        <th scope="col"><h3 class="fw-bold" style="color: #FF2C63">Music</h3></th>
 									</tr>
 								</thead>
 								<tbody>
@@ -180,6 +212,7 @@
 
 		</div>
 	</div>
+    </div>
 
 {% endblock content %}
 
@@ -237,15 +270,6 @@
 		});
 
 
-
-		$('#lineChart').sparkline([105,103,123,100,95,105,115], {
-			type: 'line',
-			height: '70',
-			width: '100%',
-			lineWidth: '2',
-			lineColor: '#ffa534',
-			fillColor: 'rgba(255, 165, 52, .14)'
-		});
 	</script>
 
 {% endblock javascripts %}
