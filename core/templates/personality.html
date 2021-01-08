@@ -12,7 +12,7 @@
 			<div class="page-inner py-5">
 				<div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
 					<div>
-						<h2 class="text-white pb-2 fw-bold"  style="font-size: 50px">Personality Analysis</h2>
+						<h2 class="text-white pb-2 fw-bold"  style="font-size: 50px">Personality Analysis &#129435</h2>
                         <h5 class="text-white op-7 mb-2 ml12" style="font-size: 20px;">Personality anaylsis results are here</h5>
 
 					</div>
@@ -249,7 +249,7 @@
 
 		};
 		window.onload = function() {
-			var ctx = document.getElementById('personalityStackedBarchart').getContext('2d');
+			var ctx = document.getElementById('personalityStackedBarchart');
 			window.myBar = new Chart(ctx, {
 				type: 'bar',
 				data: barChartData,
@@ -261,20 +261,12 @@
                             fontSize: 15,
                         }
                     },
-					title: {
-						display: true,
-						text: ''
-					},
-					tooltips: {
-						mode: 'index',
-						intersect: false
-					},
+
 					responsive: true,
 					scales: {
 						xAxes: [{
 							stacked: true,
                             ticks: {
-                                beginAtZero: true,
                                 fontColor: "#ededed",
                                 fontSize: 15,
                             }
