@@ -127,10 +127,48 @@
 			<div class="row mt--2">
 				<div class="col-md-7">
 					<div class="card full-height" style="background-color: #181743">
+                        <div class="card-header">
+                            <div class="card-head-row">
+                                <div class="card-title">Activity by Topic</div>
+
+                                <div class="card-tools">
+                                    <ul class="pagination pg-primary">
+                                        <li class="page-item active"><a class="page-link" href="#">1D</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">1W</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">1M</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">1Y</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">5Y</a></li>
+                                    </ul>
+								</div>
+
+
+                                <div class="card-tools">
+									<a href="#" class="btn btn-info btn-border btn-round btn-sm mr-2">
+										<span class="btn-label">
+											<i class="fa fa-pencil"></i>
+										</span>
+										Export
+									</a>
+									<a href="#" class="btn btn-info btn-border btn-round btn-sm">
+										<span class="btn-label">
+											<i class="fa fa-print"></i>
+										</span>
+										Print
+									</a>
+								</div>
+
+
+
+
+                        </div>
+                        </div>
+
+
 						<div class="card-body">
-                            <div class="card-header">
-                                <div class="card-title">Social Media Activities</div>
-                            </div>
+
+                            <p class="card-category" style="font-size: 20px">
+							Below barchart indicates your social media actions by topics across all social media platforms.
+                            </p>
                             <div class="card-body">
                                 <div class="chart-container">
                                     <canvas id="socialActivityChart"></canvas>
@@ -146,6 +184,17 @@
 						<div class="card-header">
 							<div class="card-head-row">
 								<div class="card-title">Activities by Platform</div>
+
+                                <div class="card-tools">
+                                    <ul class="pagination pg-primary">
+                                        <li class="page-item active"><a class="page-link" href="#">1D</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">1W</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">1M</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">1Y</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">5Y</a></li>
+                                    </ul>
+								</div>
+
 								<div class="card-tools">
 									<a href="#" class="btn btn-info btn-border btn-round btn-sm mr-2">
 										<span class="btn-label">
@@ -162,6 +211,11 @@
 								</div>
 							</div>
 						</div>
+
+                        <p   style="font-size: 20px; padding-left: 20px;">
+							Sunburst chart reveals your detailed social media behavior by topics, activates, and platforms in real-time.
+                        </p>
+
 						<div class="card-body">
 							<div class="chart-container" style="min-height: 375px">
 								<!--<canvas id="statisticsChart"></canvas>-->
@@ -191,7 +245,7 @@
 						</div>
 						<div class="card-body">
 							<div class="row">
-								<div class="col-md-7">
+								<div class="col-md-6">
 									<div class="table-responsive table-hover table-sales">
 										<table class="table location-table">
 											<tbody>
@@ -289,7 +343,7 @@
 										</table>
 									</div>
 								</div>
-								<div class="col-md-5">
+								<div class="col-md-6">
 									<div class="mapcontainer">
 										<div id="us-map" class="vmap"></div>
 									</div>
