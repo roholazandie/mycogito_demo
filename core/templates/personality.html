@@ -75,23 +75,40 @@
                                         <li class="page-item"><a class="page-link" href="#">5Y</a></li>
                                     </ul>
 								</div>
+                                <div class="card-tools">
+									<a href="#" class="btn btn-info btn-border btn-round btn-sm mr-2">
+										<span class="btn-label">
+											<i class="fa fa-pencil"></i>
+										</span>
+										Export
+									</a>
+									<a href="#" class="btn btn-info btn-border btn-round btn-sm">
+										<span class="btn-label">
+											<i class="fa fa-print"></i>
+										</span>
+										Print
+									</a>
+								</div>
                             </div>
                         </div>
 						<div class="card-body">
-
-                            <!--<div class="mx-md-auto" id="radarChart" style="height: 700px; width: 1000px"></div>-->
-                            <div class="chart-container">
+                            <p class="card-category" style="font-size: 20px; padding-bottom: 20px; padding-left: 10px">
+                                The radar chart below shows your calculated personality based on <a href="https://en.wikipedia.org/wiki/Big_Five_personality_traits" target="_blank">big five personality traits</a>.
+                            </p>
+                            <div class="card-body">
+                                <div class="chart-container">
 								<canvas id="radarChart"></canvas>
 							</div>
+                            </div>
 
 						</div>
 					</div>
 				</div>
                 <div class="col-md-6 full-height">
-					<div class="card full-height" style="background-color: #181743">
+					<div class="card" style="background-color: #181743">
                         <div class="card-header">
                             <div class="card-head-row">
-								<div class="card-title">Personality through time</div>
+								<div class="card-title align-items-center">Personality through time</div>
                                 <div class="card-tools">
                                     <ul class="pagination pg-primary">
                                         <li class="page-item active"><a class="page-link" href="#">1D</a></li>
@@ -101,12 +118,32 @@
                                         <li class="page-item"><a class="page-link" href="#">5Y</a></li>
                                     </ul>
 								</div>
+                                <div class="card-tools">
+									<a href="#" class="btn btn-info btn-border btn-round btn-sm mr-2">
+										<span class="btn-label">
+											<i class="fa fa-pencil"></i>
+										</span>
+										Export
+									</a>
+									<a href="#" class="btn btn-info btn-border btn-round btn-sm">
+										<span class="btn-label">
+											<i class="fa fa-print"></i>
+										</span>
+										Print
+									</a>
+								</div>
                             </div>
                             <div class="card-body">
-                                <div class="chart-container">
-                                    <canvas id="personalityStackedBarchart" ></canvas>
+                                <p class="card-category" style="font-size: 20px; padding-bottom: 20px; padding-left: 10px">
+                                    Below bar char indicates your five personality trait over time.
+                                </p>
+                                <div class="card-body">
+                                    <div class="chart-container">
+                                        <canvas id="personalityStackedBarchart" ></canvas>
+                                    </div>
                                 </div>
-						</div>
+						    </div>
+
                         </div>
                     </div>
 
