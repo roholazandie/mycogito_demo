@@ -13,7 +13,7 @@ class LoginForm(forms.Form):
             attrs={
                 "placeholder" : "Username",                
                 "class": "form-control",
-                "value": "test"
+                "value": ""
             }
         ))
     password = forms.CharField(
@@ -21,7 +21,7 @@ class LoginForm(forms.Form):
             attrs={
                 "placeholder" : "Password",                
                 "class": "form-control",
-                "value": "ApS12_ZZs8"
+                "value": ""
             }
         ))
 
