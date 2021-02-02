@@ -13,8 +13,12 @@ from django.contrib.auth.models import User
 from django.forms.utils import ErrorList
 from django.http import HttpResponse
 from .forms import LoginForm, SignUpForm
+import uuid
+
 
 def login_view(request):
+
+
     form = LoginForm(request.POST or None)
     msg = None
     if request.method == "POST":
@@ -22,9 +26,10 @@ def login_view(request):
         if form.is_valid():
             username = form.cleaned_data.get("username")
             password = form.cleaned_data.get("password")
-            user = authenticate(username=username, password=password)
+            #user = authenticate(username=username, password=password)
 
-            print(user)
+            #print(user)
+            user = User.objects.create_user(str(uuid.uuid4()), str(uuid.uuid4()))
             if user is not None:
                 login(request, user)
                 return redirect("/")
