@@ -18,6 +18,9 @@ import uuid
 
 def login_view(request):
 
+    if request.user.is_authenticated:
+        return redirect('/')
+
 
     form = LoginForm(request.POST or None)
     msg = None
@@ -26,10 +29,8 @@ def login_view(request):
         if form.is_valid():
             username = form.cleaned_data.get("username")
             password = form.cleaned_data.get("password")
-            #user = authenticate(username=username, password=password)
+            user = authenticate(username=username, password=password)
 
-            #print(user)
-            user = User.objects.create_user(str(uuid.uuid4()), str(uuid.uuid4()))
             if user is not None:
                 login(request, user)
                 return redirect("/")
@@ -41,6 +42,10 @@ def login_view(request):
     return render(request, "accounts/login.html", {"form": form, "msg" : msg}, RequestContext(request))
 
 def register_user(request):
+
+    if request.user.is_authenticated:
+        return redirect('/')
+
 
     msg     = None
     success = False
@@ -56,7 +61,7 @@ def register_user(request):
             msg     = 'User created - please <a href="/login">login</a>.'
             success = True
             
-            #return redirect("/login/")
+            return redirect("/login")
 
         else:
             msg = 'Form is not valid'    

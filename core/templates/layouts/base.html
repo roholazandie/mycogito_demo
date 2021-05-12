@@ -40,15 +40,22 @@
 <body data-background-color="dark">
 	<div class="wrapper">
 
-        {% include 'includes/navigation.html' %}
+        {% if request.user.is_authenticated %}
 
-        {% include 'includes/sidebar.html' %}
+            {% include 'includes/navigation.html' %}
 
+            {% include 'includes/sidebar.html' %}
+
+        {% endif %}
 		<div class="main-panel">
 			
 			{% block content %}{% endblock content %}
 
+        {% if request.user.is_authenticated %}
+
 			{% include 'includes/footer.html' %}
+
+        {% endif %}
 
 		</div>
 		
