@@ -6,7 +6,7 @@ var load_wordcloud_chart = function (data) {
   let entries = Object.entries(data);
   let result = [];
   for (let i = 0; i < entries.length; i++) {
-    if (entries[i][1] < 4)
+    if (entries[i][1] < 2)
       continue;
     result.push({name: entries[i][0], weight: entries[i][1]})
   }

@@ -35,7 +35,7 @@ var load_sentiment_chart = function(data) {
 
 
   sentimentData = {
-    labels: UTILS.fillWithSeqNumbers(data.positive_sentiments.length / 10),
+    labels: data.creation_dates,
     datasets: [
       {
         label: 'Positive Sentiments',
