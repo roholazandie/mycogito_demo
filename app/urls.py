@@ -11,6 +11,8 @@ urlpatterns = [
     # The home page
     path('', views.index, name='home'),
 
+    path('settings/twitter/', views.settings, name="settings.twitter"),
+
     # Matches any html file
     re_path(r'^.*\.*', views.pages, name='pages'),
 

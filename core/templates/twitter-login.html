@@ -1,5 +1,7 @@
 <form id="twitter-login-form">
       <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
+    {% csrf_token %}
+    <div class="alert alert-success" id="twitter-connect" style="display: none;" role="alert"></div>
   <div class="input-group mb-2 mr-sm-2">
     <div class="input-group-prepend">
       <div class="input-group-text">@</div>

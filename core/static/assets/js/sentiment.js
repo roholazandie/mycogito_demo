@@ -86,28 +86,3 @@ var load_sentiment_chart = function(data) {
   return new Chart(sentimentChartElement, sentimentChartConfig);
 
 };
-
-$(function() {
-
-  var userData = {
-    platform_name: 'twitter',
-    account_name: 'roholazandie',
-    request: 'sentiment_over_time'
-  };
-  var sentimentURL = 'https://t4beikuqzf.execute-api.us-east-1.amazonaws.com/Prod/hello';
-
-
-  $.ajax({
-    url: sentimentURL,
-    data: userData,
-    type: 'GET',
-    error: function(result){
-        console.log(result);
-    },
-    success: function(result){
-        console.log(result);
-        sentimentChart = load_sentiment_chart(result);
-    },
-    timeout: 60000 // sets timeout to 3 seconds
-});
-});

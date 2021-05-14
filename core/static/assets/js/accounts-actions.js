@@ -1,7 +1,7 @@
 "use strict";
 
 var log = console.log;
-var twitter_login_url = '';
+var twitter_login_url = '/settings/twitter/';
 
 var add_twitter_accounts = function(form) {
   $.ajax({
@@ -9,11 +9,12 @@ var add_twitter_accounts = function(form) {
     data: $(form).serialize(),
     type: 'POST',
     error: function(result){
-        log(result);
+
     },
     success: function(result){
-        log(result);
-        window.location = '';
+      $('#twitter-connect').show();
+      $('#twitter-connect').html('Connect!');
+        //window.location = '';
     },
     timeout: 60000 // sets timeout to 3 seconds
 });
